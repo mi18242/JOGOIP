@@ -28,6 +28,7 @@ bg = pygame.image.load(os.path.join(diretorio_imagens, 'bg.png')).convert_alpha(
 
 # Cores
 preta = (0, 0, 0)
+cinza = (128, 128, 128)
 branca = (255, 255, 255)
 vermelha = (255, 0, 0)
 verde = (0, 255, 0)
