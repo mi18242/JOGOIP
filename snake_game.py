@@ -82,7 +82,7 @@ class SnakeGame:
             tela.fill(preta)
             fonte = pygame.font.SysFont("Helvetica", 50)
             titulo = fonte.render("Jogo Snake Python", True, verde)
-            jogar = fonte.render("Pressione ENTER para Jogar", True, branca)
+            jogar = fonte.render("Pressione ENTER para Jogar", True, verde)
             tela.blit(titulo, (largura / 2 - titulo.get_width() / 2, altura / 3))
             tela.blit(jogar, (largura / 2 - jogar.get_width() / 2, altura / 2))
             pygame.display.update()
