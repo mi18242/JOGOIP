@@ -83,7 +83,7 @@ class SnakeGame:
     def menu_principal():
         menu = True
         while menu:
-            tela.fill(preta)
+            tela.fill(cinza)
             fonte = pygame.font.SysFont("Helvetica", 50)
             titulo = fonte.render("Jogo Snake Python", True, verde)
             jogar = fonte.render("Pressione ENTER para Jogar", True, branca)
