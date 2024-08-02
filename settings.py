@@ -33,3 +33,11 @@ vermelha = (255, 0, 0)
 verde = (0, 255, 0)
 azul = (0, 0, 255)
 amarelo = (255, 255, 0)
+
+#som:
+pygame.mixer.music.set_volume(0.20)
+musica_de_fundo = pygame.mixer.music.load('sons/Soundtrack from Pou _-_ - Connect _ Cliff Jump _ C(MP3_70K).mp3')
+pygame.mixer.music.play(-1)
+
+barulho_colisao_comidas = pygame.mixer.Sound('sons/smw_coin.wav')
+barulho_colisao_run_time = pygame.mixer.Sound('sons/y2mate_rLgMJTu.wav')
