@@ -34,7 +34,8 @@ def selecionar_velocidade(tecla, velocidade_x, velocidade_y):
 def fim_de_jogo(pontuacao, capturas_verdes, capturas_azuis, capturas_amarelas):
     fim_jogo = True
     while fim_jogo:
-        tela.fill(preta)
+        #COR DA TELA FINAL
+        tela.fill(cinza)
 
         fonte = pygame.font.SysFont("Helvetica", 60)
         fonte_menor = pygame.font.SysFont("Helvetica", 40)
