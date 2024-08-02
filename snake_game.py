@@ -80,7 +80,6 @@ class SnakeGame:
         self.todas_sprites.add(self.comida)
         self.bomba = Bomb(self.pixels, self.comida.rect)
 
-    @staticmethod
     def menu_principal():
         menu = True
         while menu:
