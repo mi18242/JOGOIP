@@ -43,16 +43,21 @@ class SnakeGame:
         self.y += self.velocidade_y
         if self.x < 128 or self.x >= largura - 128 or self.y < 64 or self.y >= altura - 64:
             self.fim_jogo = True
+            barulho_colisao_run_time.play()
         self.pixels.append([self.x, self.y])
         if len(self.pixels) > self.tamanho_cobra:
             del self.pixels[0]
         for pixel in self.pixels[:-1]:
             if pixel == [self.x, self.y]:
                 self.fim_jogo = True
+                barulho_colisao_run_time.play()
         if pygame.Rect.colliderect(self.comida.rect, [self.pixels[-1][0], self.pixels[-1][1], tamanho_quadrado, tamanho_quadrado]):
             self.comer_comida()
+            barulho_colisao_comidas.play()
         if pygame.Rect.colliderect(self.bomba.rect, [self.pixels[-1][0], self.pixels[-1][1], tamanho_quadrado, tamanho_quadrado]):
             self.fim_jogo = True
+            barulho_colisao_run_time.play()
+        
 
     def desenhar(self):
         self.bomba.desenhar()
@@ -75,11 +80,10 @@ class SnakeGame:
         self.todas_sprites.add(self.comida)
         self.bomba = Bomb(self.pixels, self.comida.rect)
 
-    @staticmethod
     def menu_principal():
         menu = True
         while menu:
-            tela.fill(preta)
+            tela.fill(cinza)
             fonte = pygame.font.SysFont("Helvetica", 50)
             titulo = fonte.render("Jogo Snake Python", True, verde)
             jogar = fonte.render("Pressione ENTER para Jogar", True, branca)
@@ -95,3 +99,4 @@ class SnakeGame:
                         menu = False
         jogo = SnakeGame()
         jogo.rodar_jogo()
+
