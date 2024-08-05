@@ -91,7 +91,14 @@ No decorrer do processo de criação e aperfeiçoamento do jogo, tivemos alguns 
 Além disso, vale ressaltar que adquirimos um conhecimento muito grande sobre trabalho em equipe e divisão justa de serviços e a importancia de como usar a teoria aprendida nas aulas de maneira eficiente.
 
 ## Imagens:
+![WhatsApp Image 2024-08-05 at 11 57 30](https://github.com/user-attachments/assets/7162f251-51a6-4bfd-b027-a96fac5daeb8)
+Tela inicial do jogo
 
+![WhatsApp Image 2024-08-05 at 11 59 14](https://github.com/user-attachments/assets/139d0fef-1864-4934-970a-cf6aaf9a4464)
+Tela final do jogo
+
+![WhatsApp Image 2024-08-05 at 09 43 43](https://github.com/user-attachments/assets/d5140bc6-86b9-419f-bf21-3bbf5c861582)
+Imagem do jogo
 
 
 
