@@ -33,6 +33,7 @@ vermelha = (255, 0, 0)
 verde = (0, 255, 0)
 azul = (0, 0, 255)
 amarelo = (255, 255, 0)
+cinza = (128, 128, 128)
 
 #som:
 pygame.mixer.music.set_volume(0.20)
