@@ -1,6 +1,6 @@
 # Snake python
 
-Snake python é um jogo baseado em uma experiência 2D, que simula uma cobra que "passeia" pelo Grad5 e se "alimenta" de 3 coletáveis que remetem as questões fáceis, médias e difíceis das listas de IP, além disso, a cobra tenta fugir ao máximo da "bomba"(run time error) - objeto que causa sua morte. Além do mais, o tamanho da cobra cresce à medida que mais se alimenta dos coletáveis e, ademais, a cobra também morre se tocar em si mesma e se bater nas "boradas" do jogo. Vale ressaltar também que:
+Snake python é um jogo baseado em uma experiência 2D, que simula uma cobra que "passeia" pelo Grad5 e se "alimenta" de 3 coletáveis que remetem as questões fáceis, médias e difíceis das listas de IP, além disso, a cobra tenta fugir ao máximo da "bomba"(run time error) - objeto que causa sua morte. Além do mais, o tamanho da cobra cresce à medida que mais se alimenta dos coletáveis e, ademais, a cobra também morre se tocar em si mesma e se bater nas "bordas" do jogo. Vale ressaltar também que:
 - HARD: aumenta em dois a pontuação da cobra;
 - MEDIUM: aumenta em três a potuação da cobra;
 - EASY : aumenta em um a pontuação da cobra;
@@ -37,9 +37,9 @@ Sendo a primeira delas para mover a cobrinha para o lado, a segunda mover para c
 - https://github.com/mi18242/JOGOIP
 
 ## Organização do código:
-> Como usamos o conceito de modularização do código, o nosso código foi dividido em 4 módulos:
+> Como usamos o conceito de modularização do código, o nosso código foi dividido em 6 módulos:
 
-> - O módulo "Bomb.py" foi criado para armazenar informações relativa a bomba(run time error). Além disso, possui:
+> - O módulo "Bomb.py" foi criado para armazenar informações relativa a bomba(run time error). Além disso, possui a classe bomba, configura abaixo de maneira resumida sua funcionalidade :
   
     - Class Bomb: Responsável por criar, posicionar e desenhar uma bomba em um jogo feito com Pygame e, além disso, contém "gerar bomba"- que gera uma posição aleatória para a bomba que não colide com a cobra ou com a comida e "desenhar"- que desenha a bomba na tela na posição bomba_x, bomba_y.
 
@@ -47,11 +47,11 @@ Sendo a primeira delas para mover a cobrinha para o lado, a segunda mover para c
 
 > - O módulo "Settings.py" é a funcao que inicializa o Pygame e faz as configurações principais do jogo, além disso define os caminhos para os diretórios principais, de imagens e sons e faz o carregamento de imagens e definição das cores.
 
-> - O módulo "sprites.py" foi criado para armazenar uma classe chamada food e carrega as informações relativas a "comida" e atualiza o sprite da comida :
+> - O módulo "sprites.py" foi criado para armazenar uma classe chamada food e carrega as informações relativas a "comida" e atualiza o sprite da comida, configura abaixo a importância da classe food para o jogo :
 
-    - Class comida(): Esta classe utiliza sprites para representar diferentes tipos de comida, cada um com uma cor e um valor em pontos diferentes.
+    - Class Food(): Esta classe utiliza sprites para representar diferentes tipos de comida, cada um com uma cor e um valor em pontos diferentes.
 
-> - O módulo "functions.py" contém funções auxiliares para diferentes aspectos do jogo:
+> - O módulo "functions.py" contém funções auxiliares para diferentes aspectos do jogo, como podemos ver abaixo:
 
     - "desenhar_cobra": Esta função é responsável por desenhar a cobra na tela.
     
@@ -76,15 +76,15 @@ Sendo a primeira delas para mover a cobrinha para o lado, a segunda mover para c
 
 - Listas: Utilizadas na geração de bombas e na posição da cobra. No código rodar_jogo, por exemplo, a lista pixels armazena as coordenadas dos segmentos da cobra e é usada para evitar que a comida apareça em posições ocupadas pela cobra.
 - Tuplas: Usadas para identificar coordenadas, como na definição da posição da comida e da bomba. No código da classe Comida, por exemplo, as tuplas são usadas para armazenar as coordenadas (comida_x, comida_y) e definir a posição da comida.
-- Orientação a Objetos: Estruturação completa dos componentes do jogo. Como, por exemplo, a classe food que define objetos de comida e a classe Bomb que é responsável por "desenhar" o run time error no jogo. 
-- Condicionais: Importantes para as regras e colisões do jogo. No código rodar_jogo, as condicionais verificam se a cobra colidiu com as paredes ou consigo mesma, ou se a cobra colidiu com a comida ou com a bomba.
+- Orientação a Objetos: Estruturação completa dos componentes do jogo. Como, por exemplo, a classe food que define objetos de comida e a classe Bomb que é responsável por "desenhar" o comportamento do run time error no jogo. 
+- Condicionais: Importantes para as regras e colisões do jogo. No código, as condicionais verificam se a cobra colidiu com as paredes ou consigo mesma, ou se a cobra colidiu com a comida ou com a bomba.
 - Laços: O jogo ocorre dentro de um laço while not fim_jogo. Esse laço mantém o jogo em execução, atualizando a posição da cobra, desenhando os elementos na tela e verificando eventos de entrada do jogador.
 
 ## Desafios e Lições:
-No decorrer do processo de criação e aperfeiçoamento do jogo, tivemos alguns desafios com relação ao uso das ferramentas novas apresentadas a serem utilizadas e problemas encontradas que poderiam atrapalhar na jogabilidade, que poderiam atrapalhar na jogabilidade, por exemplo:
+No decorrer do processo de criação e aperfeiçoamento do jogo, tivemos alguns desafios com relação ao uso das novas ferramentas apresentadas a serem utilizadas e problemas encontradas que poderiam atrapalhar na jogabilidade, por exemplo:
 
-- POO: A compreensão de como iríamos usar o POO(programação orientada a objetos) no código nos custou tempo. Conforme fomos entendendo mais sobre seus aspectos, percebemos que precisávamos implementar mais de suas ferramentas no código, principalmente por causa da organização e facilitação as possíveis alterações.
-- Problema na colisão: Nossa cobra pode morrer de três formas: Ao se chocar com as bordas da tela, uma colisão com a bomba(run time error) ou ao bater em si mesma. Entretanto, ao fazer o movimento de, por exemplo, ir para a direita e ir para a esquerda, a cobra chocava com si mesma e morria. Esse movimento não poderia acontecer no jogo, visto que poderia confunfir a jogabilidade, posto isto, para resolver o problema, adicionamos mais uma condicional.
+- POO: A compreensão de como iríamos usar o POO(programação orientada a objetos) no código nos custou tempo. Conforme fomos entendendo mais sobre seus aspectos, percebemos que precisávamos implementar mais de suas ferramentas no código, principalmente por causa da organização e facilitação das possíveis alterações.
+- Problema na colisão: Nossa cobra pode morrer de três formas, ao se chocar com as bordas da tela, uma colisão com a bomba(run time error) ou ao bater em si mesma. Entretanto, ao fazer o movimento de, por exemplo, ir para a direita e ir para a esquerda, a cobra chocava com si mesma e morria. Esse movimento não poderia acontecer no jogo, visto que poderia confunfir a jogabilidade, posto isto, para resolver o problema, adicionamos mais condicionais.
 - Ajustes na tela: Por termos tomado as medidas da tela cedo, foi necessário revisar tudo novamente para termos um designer melhor e que se encaixasse nos nossos objetivos. Além disso, foi preciso ajustar qual parte a cobra poderia pecorrer, para não "cobrir" a informação da pontuação.
 - Reduzido conhecimento em Pygame, git/github: Foi necessário buscar informações sobre essas ferramentas que facilitam muito a elaboração de projetos.
    
